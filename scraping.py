@@ -4,6 +4,14 @@ import pandas as pd
 
 
 def csv_scraper(filename: str) -> list:
+    '''
+    Scraps word, POS, and definitions data from personal, pre-exising Discord 
+    chat logs
+    
+    :param filename: name of the .csv file
+    :return: a list of all the words (+ their POS & definitions), stripped of preceding 
+    emoticon markdown & white space 
+    '''
     strip = []
     data = pd.read_csv(filename, skipfooter=1, skip_blank_lines=True, engine='python')
     for i, row in data.iterrows():
