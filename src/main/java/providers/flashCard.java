@@ -11,5 +11,27 @@ import java.util.LinkedHashMap;
  */
 public class flashCard {
     private String word;
-    private LinkedHashMap<partOfSpeech, Text> definition;
+    private LinkedHashMap<partOfSpeech, Text> definition = new LinkedHashMap<>();
+
+    /**
+     * Default constructor. Creates a blank flash card, front and back.
+     */
+    public flashCard() {
+        this.word = "";
+    }
+
+    /**
+     * A constructor to fill out the front and back side of a flash card.
+     *
+     * @param word name of the word
+     * @param PoS initial definition's part of speech
+     * @param def the definition of the designated word
+     */
+    public flashCard(String word, partOfSpeech PoS, Text def) {
+        this.word = word;
+        definition.put(PoS, def);
+    }
 }
+
+
+
