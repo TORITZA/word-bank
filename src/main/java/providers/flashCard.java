@@ -2,7 +2,9 @@ package providers;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 /**
  *
@@ -11,7 +13,7 @@ import java.util.LinkedHashMap;
  */
 public class flashCard {
     private String word;
-    private LinkedHashMap<partOfSpeech, Text> definition = new LinkedHashMap<>();
+    private LinkedHashMap<partOfSpeech, List<Text>> definition = new LinkedHashMap<>();
 
     /**
      * Default constructor. Creates a blank flash card, front and back.
@@ -29,16 +31,28 @@ public class flashCard {
      */
     public flashCard(String word, partOfSpeech PoS, Text def) {
         this.word = word;
-        definition.put(PoS, def);
+        definition.put(PoS, new ArrayList<>());
+        definition.get(PoS).add(def);
     }
 
-    public void edit(String content) {
-        this.word = content;
+    /**
+     * WIP desc -> this.word
+     *
+     * @param newContent
+     */
+    public void edit(String newContent) {
+        word = newContent;
     }
 
-    public void edit(partOfSpeech PoS, Text content) {
-        //if PoS
-        //definition.get(PoS) = content;
+    /**
+     * WIP desc -> this.definition
+     *
+     * @param PoS
+     * @param selected
+     * @param newContent
+     */
+    public void edit(partOfSpeech PoS, int selected, Text newContent) {
+        definition.get(PoS).set(selected, newContent);
     }
 }
 
