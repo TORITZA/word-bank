@@ -31,6 +31,15 @@ public class flashCard {
         this.word = word;
         definition.put(PoS, def);
     }
+
+    public void edit(String content) {
+        this.word = content;
+    }
+
+    public void edit(partOfSpeech PoS, Text content) {
+        //if PoS
+        //definition.get(PoS) = content;
+    }
 }
 
 
