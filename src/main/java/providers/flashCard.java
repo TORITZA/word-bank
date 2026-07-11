@@ -54,6 +54,21 @@ public class flashCard {
     public void edit(partOfSpeech PoS, int selected, Text newContent) {
         definition.get(PoS).set(selected, newContent);
     }
+
+    /**
+     *
+     *
+     * @param PoS
+     * @param newDef
+     */
+    public void addNew(partOfSpeech PoS, Text newDef) {
+        if (definition.containsKey(PoS)) {
+            definition.get(PoS).add(newDef);
+        } else {
+            definition.put(PoS, new ArrayList<>());
+            definition.get(PoS).add(newDef);
+        }
+    }
 }
 
 
