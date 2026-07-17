@@ -2,9 +2,8 @@ package providers;
 
 import org.w3c.dom.Text;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
+import java.util.*;
+
 import providers.partOfSpeech;
 
 /**
@@ -15,6 +14,10 @@ import providers.partOfSpeech;
 public class flashCard {
     private String word;
     private LinkedHashMap<partOfSpeech, List<Text>> definition = new LinkedHashMap<>();
+    /** semantic usage of the word, exemplified in a sentence */
+        // Integer:
+    private LinkedHashMap<Integer, List<Text>> example = new LinkedHashMap<>();
+    private Set<String> tags = new HashSet<>();
 
     /**
      * Default constructor. Creates a blank flash card, front and back.
@@ -69,6 +72,15 @@ public class flashCard {
             definition.put(PoS, new ArrayList<>());
             definition.get(PoS).add(newDef);
         }
+    }
+
+    public void editExample(Integer index, Text setText) {
+        if (example.containsKey(index)) {
+            example.get(index).add(setText);
+        } else {
+
+        }
+
     }
 }
 
