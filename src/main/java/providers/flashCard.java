@@ -1,6 +1,5 @@
 package providers;
 
-import org.w3c.dom.Text;
 
 import java.util.*;
 
@@ -13,8 +12,7 @@ import providers.partOfSpeech;
  */
 public class flashCard {
     private String word;
-    private LinkedHashMap<partOfSpeech, List<Text>> definition = new LinkedHashMap<>();
-    /** semantic usage of the word, exemplified in a sentence */
+    private List<definition> definitions = new ArrayList<>();
         // Integer:
     private LinkedHashMap<Integer, List<Text>> example = new LinkedHashMap<>();
     private Set<String> tags = new HashSet<>();
