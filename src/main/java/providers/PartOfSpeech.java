@@ -5,7 +5,7 @@ package providers;
  *
  * @author Tereza Lang (@TORITZA)
  */
-public enum partOfSpeech {
+public enum PartOfSpeech {
     NOUN("n."),
     PRONOUN("prn."),
     ADJECTIVE("adj."),
@@ -21,7 +21,7 @@ public enum partOfSpeech {
      *
      * @param abbreviation
      */
-    partOfSpeech(String abbreviation) {
+    PartOfSpeech(String abbreviation) {
         this.abbreviation = abbreviation;
     }
 
