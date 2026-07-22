@@ -1,8 +1,6 @@
 package providers;
 
 
-import javafx.scene.text.Text;
-
 /**
  *
  *
@@ -10,9 +8,9 @@ import javafx.scene.text.Text;
  */
 public class Definition {
     private PartOfSpeech PoS;
-    private Text description;
+    private String description;
     /** semantic usage of the word this definition is for, exemplified in a sentence */
-    private Text example;
+    private String example;
 
     /**
      *
@@ -20,10 +18,10 @@ public class Definition {
      * @param PoS
      * @param description
      */
-    public Definition(PartOfSpeech PoS, Text description) {
+    public Definition(PartOfSpeech PoS, String description) {
         this.PoS = PoS;
         this.description = description;
-        this.example = new Text();
+        this.example = "";
     }
 
     /**
@@ -33,13 +31,13 @@ public class Definition {
      * @param description
      * @param example
      */
-    public Definition(PartOfSpeech PoS, Text description, Text example) {
+    public Definition(PartOfSpeech PoS, String description, String example) {
         this.PoS = PoS;
         this.description = description;
         this.example = example;
     }
 
-    private void editExample(Text newExample) {
+    private void editExample(String newExample) {
         this.example = newExample;
     }
 }

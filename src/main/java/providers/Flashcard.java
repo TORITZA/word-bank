@@ -30,7 +30,7 @@ public class Flashcard {
      * @param PoS initial definition's part of speech
      * @param def the definition of the designated word
      */
-    public Flashcard(String word, PartOfSpeech PoS, Text def) {
+    public Flashcard(String word, PartOfSpeech PoS, String def) {
         this.word = word;
         definitions.add(new Definition(PoS, def));
     }
@@ -44,7 +44,7 @@ public class Flashcard {
      * @param def
      * @param example
      */
-    public Flashcard(String word, PartOfSpeech PoS, Text def, Text example) {
+    public Flashcard(String word, PartOfSpeech PoS, String def, String example) {
         this.word = word;
         definitions.add(new Definition(PoS, def, example));
     }
@@ -66,7 +66,7 @@ public class Flashcard {
      * @param selected
      * @param newContent
      */
-    public void edit(PartOfSpeech PoS, int selected, Text newContent) {
+    public void edit(PartOfSpeech PoS, int selected, String newContent) {
         definitions.set(selected, new Definition(PoS, newContent));
     }
 
@@ -76,7 +76,7 @@ public class Flashcard {
      * @param PoS
      * @param newDef
      */
-    public void addNew(PartOfSpeech PoS, Text newDef) {
+    public void addNew(PartOfSpeech PoS, String newDef) {
         definitions.add(new Definition(PoS, newDef));
     }
 
