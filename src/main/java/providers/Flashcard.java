@@ -13,7 +13,8 @@ import javafx.scene.text.Text;
 public class Flashcard {
     private String word;
     private List<Definition> definitions = new ArrayList<>();
-    private Set<String> tags = new HashSet<>();
+    private List<String> source = new ArrayList<>();
+    private Set<String> tags = new LinkedHashSet<>();
 
     /**
      * Default constructor. Creates a blank flash card, front and back.
