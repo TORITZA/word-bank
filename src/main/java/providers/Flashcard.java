@@ -2,8 +2,7 @@ package providers;
 
 
 import java.util.*;
-
-import javafx.scene.text.Text;
+import providers.Definition;
 
 /**
  *
@@ -86,8 +85,8 @@ public class Flashcard {
      * @param index
      * @param setText
      */
-    public void editExample(Integer index, Text setText) {
-        //definitions.get(index).
+    public void editExample(Integer index, String setText) {
+        //definitions.get(index).editExample(setText);
     }
 }
 
