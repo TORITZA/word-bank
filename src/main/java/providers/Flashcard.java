@@ -58,8 +58,11 @@ public class Flashcard {
     @Override
     public boolean equals(Object other) {
         if (other instanceof Flashcard otherCard) {
-            return this.word.equals(otherCard.word) && //
+            return this.word.equals(otherCard.word) && this.definitions.equals
+                    (otherCard.definitions) && this.source.equals(otherCard.source) &&
+                    this.tags.equals(otherCard.tags);
         }
+        return false;
     }
 
     /**
