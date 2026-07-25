@@ -37,7 +37,12 @@ public class Definition {
         this.example = example;
     }
 
-    private void editExample(String newExample) {
+    /**
+     * ____ // package-private
+     *
+     * @param newExample
+     */
+    void editExample(String newExample) {
         this.example = newExample;
     }
 }

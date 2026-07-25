@@ -55,7 +55,7 @@ public class Flashcard {
      *
      * @param newContent
      */
-    public void edit(String newContent) {
+    private void edit(String newContent) {
         word = newContent;
     }
 
@@ -66,7 +66,7 @@ public class Flashcard {
      * @param selected
      * @param newContent
      */
-    public void edit(PartOfSpeech PoS, int selected, String newContent) {
+    private void edit(PartOfSpeech PoS, int selected, String newContent) {
         definitions.set(selected, new Definition(PoS, newContent));
     }
 
@@ -76,17 +76,18 @@ public class Flashcard {
      * @param PoS
      * @param newDef
      */
-    public void addNew(PartOfSpeech PoS, String newDef) {
+    private void addNew(PartOfSpeech PoS, String newDef) {
         definitions.add(new Definition(PoS, newDef));
     }
 
     /**
      *
+     *
      * @param index
      * @param setText
      */
-    public void editExample(Integer index, String setText) {
-        //definitions.get(index).editExample(setText);
+    private void editExample(Integer index, String setText) {
+        definitions.get(index).editExample(setText);
     }
 }
 
