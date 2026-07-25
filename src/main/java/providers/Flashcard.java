@@ -49,13 +49,25 @@ public class Flashcard {
         definitions.add(new Definition(PoS, def, example));
     }
 
+    /**
+     *
+     *
+     * @param other
+     * @return
+     */
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof Flashcard otherCard) {
+            return this.word.equals(otherCard.word) && //
+        }
+    }
 
     /**
      * WIP desc -> this.word
      *
      * @param newContent
      */
-    private void edit(String newContent) {
+    public void edit(String newContent) {
         word = newContent;
     }
 
@@ -66,7 +78,7 @@ public class Flashcard {
      * @param selected
      * @param newContent
      */
-    private void edit(PartOfSpeech PoS, int selected, String newContent) {
+    public void edit(PartOfSpeech PoS, int selected, String newContent) {
         definitions.set(selected, new Definition(PoS, newContent));
     }
 
@@ -76,7 +88,7 @@ public class Flashcard {
      * @param PoS
      * @param newDef
      */
-    private void addNew(PartOfSpeech PoS, String newDef) {
+    public void addNew(PartOfSpeech PoS, String newDef) {
         definitions.add(new Definition(PoS, newDef));
     }
 
@@ -86,7 +98,7 @@ public class Flashcard {
      * @param index
      * @param setText
      */
-    private void editExample(Integer index, String setText) {
+    public void editExample(Integer index, String setText) {
         definitions.get(index).editExample(setText);
     }
 }

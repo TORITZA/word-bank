@@ -38,11 +38,25 @@ public class Definition {
     }
 
     /**
-     * ____ // package-private
+     *
+     * @param other   the reference object with which to compare.
+     * @return
+     */
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof Definition otherDef) {
+            return this.PoS == otherDef.PoS && this.description.equals(otherDef.description)
+                    && this.example.equals(otherDef.example);
+        }
+        return false;
+    }
+
+    /**
+     * ____
      *
      * @param newExample
      */
-    void editExample(String newExample) {
+    public void editExample(String newExample) {
         this.example = newExample;
     }
 }
