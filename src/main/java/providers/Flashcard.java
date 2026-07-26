@@ -24,7 +24,8 @@ public class Flashcard {
 
     /**
      * A constructor to fill out the front and back side of a flashcard, excluding
-     * any example sentences using the vocabulary word.
+     * any example sentences using the vocabulary word & from where the user first
+     * encountered the word.
      *
      * @param word name of the word
      * @param PoS initial definition's part of speech
@@ -36,6 +37,20 @@ public class Flashcard {
     }
 
     /**
+     * A constructor to fill out the front and back side of a flashcard, including
+     * any example sentences using the vocabulary word.
+     *
+     * @param word name of the word
+     * @param PoS initial definition's part of speech
+     * @param def the definition of the designated word
+     * @param example a sentence showcasing the semantic & syntactic properties of the word
+     */
+    public Flashcard(String word, PartOfSpeech PoS, String def, String example) {
+        this.word = word;
+        definitions.add(new Definition(PoS, def, example));
+    }
+
+    /**
      * A constructor to fill out all fields on both the front and back side of
      * a flashcard.
      *
@@ -44,9 +59,10 @@ public class Flashcard {
      * @param def
      * @param example
      */
-    public Flashcard(String word, PartOfSpeech PoS, String def, String example) {
+    public Flashcard(String word, PartOfSpeech PoS, String def, String example, String origin) {
         this.word = word;
         definitions.add(new Definition(PoS, def, example));
+        source.add(origin);
     }
 
     /**
@@ -104,6 +120,16 @@ public class Flashcard {
     public void editExample(Integer index, String setText) {
         definitions.get(index).editExample(setText);
     }
+
+    /**
+     *
+     *
+     * @param origin
+     */
+    public void addSource(String origin) {
+        source.add(origin);
+    }
+
 }
 
 
