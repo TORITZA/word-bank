@@ -138,6 +138,14 @@ public class Flashcard {
         tags.add(tag);
     }
 
+    /**
+     *
+     * @param tag
+     */
+    public void removeTag(String tag) {
+        tags.remove(tag);
+    }
+
 
 
 }
