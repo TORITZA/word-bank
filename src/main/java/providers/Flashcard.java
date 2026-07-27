@@ -130,6 +130,16 @@ public class Flashcard {
         source.add(origin);
     }
 
+    /**
+     *
+     * @param tag
+     */
+    public void addTag(String tag) {
+        tags.add(tag);
+    }
+
+
+
 }
 
 
