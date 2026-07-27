@@ -146,7 +146,14 @@ public class Flashcard {
         tags.remove(tag);
     }
 
-
+    /**
+     *
+     * @param tag
+     * @return
+     */
+    public boolean hasTag(String tag) {
+        return tags.contains(tag);
+    }
 
 }
 
