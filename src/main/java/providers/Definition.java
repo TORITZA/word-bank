@@ -1,6 +1,8 @@
 package providers;
 
 
+import javafx.scene.image.Image;
+
 /**
  *
  *
@@ -11,6 +13,7 @@ public class Definition {
     private String description;
     /** semantic usage of the word this definition is for, exemplified in a sentence */
     private String example;
+    private Image img;
 
     /**
      *

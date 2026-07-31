@@ -12,4 +12,16 @@ import java.util.Set;
  */
 public class WordBankModel {
     private Set<Flashcard> flashcards = new LinkedHashSet<>();
+    private Set<String> createdTags = new LinkedHashSet<>();
+
+    // addFlashcard
+
+    /**
+     * ____
+     *
+     * @param newTag
+     */
+    private void createTag(String newTag) {
+        createdTags.add(newTag);
+    }
 }

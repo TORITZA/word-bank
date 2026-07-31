@@ -2,6 +2,8 @@ package providers;
 
 
 import java.util.*;
+
+import javafx.scene.image.Image;
 import providers.Definition;
 
 /**
@@ -14,6 +16,7 @@ public class Flashcard {
     private List<Definition> definitions = new ArrayList<>();
     private List<String> source = new ArrayList<>();
     private Set<String> tags = new LinkedHashSet<>();
+    private List<Image> gallery = new ArrayList<>();
 
     /**
      * Default constructor. Creates a blank flash card, front and back.
