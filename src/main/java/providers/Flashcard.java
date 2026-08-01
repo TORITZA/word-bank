@@ -16,6 +16,7 @@ public class Flashcard {
     private List<Definition> definitions = new ArrayList<>();
     private List<String> source = new ArrayList<>();
     private Set<String> tags = new LinkedHashSet<>();
+    private Set<String> synonyms = new LinkedHashSet<>();
     private List<Image> gallery = new ArrayList<>();
 
     /**
