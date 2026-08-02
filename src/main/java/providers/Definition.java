@@ -62,4 +62,13 @@ public class Definition {
     public void editExample(String newExample) {
         this.example = newExample;
     }
+
+    /**
+     *
+     *
+     * @return
+     */
+    public Image getImage() {
+        return img;
+    }
 }
