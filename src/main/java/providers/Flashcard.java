@@ -162,6 +162,45 @@ public class Flashcard {
         return tags.contains(tag);
     }
 
+
+    // ----------------------------------GETTERS----------------------------------
+
+    /**
+     *
+     * @return
+     */
+    public String getWord() {return word;}
+
+    /**
+     *
+     * @return
+     */
+    public List<Definition> getDefinitions() {return definitions;}
+
+    /**
+     *
+     * @return
+     */
+    public List<String> getSource() {return source;}
+
+    /**
+     *
+     * @return
+     */
+    public Set<String> getTags() {return tags;}
+
+    /**
+     *
+     * @return
+     */
+    public Set<String> getRelatedWords() {return relatedWords;}
+
+    /**
+     *
+     * @return
+     */
+    public List<Image> getGallery() {return gallery;}
+
 }
 
 
