@@ -6,4 +6,10 @@ package dictionary;
  * @author Tereza Lang (@TORITZA)
  */
 public class test {
+    
+    public static void main() {
+
+
+
+    }
 }

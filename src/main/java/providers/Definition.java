@@ -4,7 +4,7 @@ package providers;
 import javafx.scene.image.Image;
 
 /**
- *
+ * _____
  *
  * @author Tereza Lang (@TORITZA)
  */
@@ -62,6 +62,27 @@ public class Definition {
     public void editExample(String newExample) {
         this.example = newExample;
     }
+
+
+    // ----------------------------------GETTERS----------------------------------
+
+    /**
+     *
+     * @return
+     */
+    public PartOfSpeech getPOS() {return PoS;}
+
+    /**
+     *
+     * @return
+     */
+    public String getDescription() {return description;}
+
+    /**
+     *
+     * @return
+     */
+    public String getExample() {return example;}
 
     /**
      *
