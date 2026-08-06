@@ -63,6 +63,23 @@ public class Definition {
         this.example = newExample;
     }
 
+    /**
+     * __
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        StringBuilder defSB = new StringBuilder("[" + PoS.toString() + "] - ");
+        defSB.append(description);
+
+        if (!example.isEmpty()) {
+            defSB.append("/n" + example);
+        }
+
+        return defSB.toString();
+    }
+
 
     // ----------------------------------GETTERS----------------------------------
 
