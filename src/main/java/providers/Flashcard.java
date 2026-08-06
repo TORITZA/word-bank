@@ -162,6 +162,42 @@ public class Flashcard {
         return tags.contains(tag);
     }
 
+    /**
+     * __
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        StringBuilder cardSB = new StringBuilder(word.toLowerCase());
+
+        if (!definitions.isEmpty()) {
+            cardSB.append("\n");
+            for (Definition def : definitions) {
+                cardSB.append("\t").append(def).append("\n");
+            }
+        }
+        if (!source.isEmpty()) {
+            cardSB.append(source).append("\n");
+        }
+        if (!tags.isEmpty()) {
+            cardSB.append("Tags:").append("\n").append("\t");
+            for (String tag : tags) {
+                cardSB.append(tag).append("  ");
+            }
+            cardSB.append("\n");
+        }
+        if (!relatedWords.isEmpty()) {
+            cardSB.append("Related:").append("\n").append("\t");
+            for (String word : relatedWords) {
+                cardSB.append(word).append("  ");
+            }
+            cardSB.append("\n");
+        }
+
+        return cardSB.toString();
+    }
+
 
     // ----------------------------------GETTERS----------------------------------
 

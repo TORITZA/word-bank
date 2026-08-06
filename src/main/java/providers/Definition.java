@@ -74,7 +74,7 @@ public class Definition {
         defSB.append(description);
 
         if (!example.isEmpty()) {
-            defSB.append("/n" + example);
+            defSB.append("\n").append(example);
         }
 
         return defSB.toString();
