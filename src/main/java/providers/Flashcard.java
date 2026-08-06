@@ -178,7 +178,7 @@ public class Flashcard {
             }
         }
         if (!source.isEmpty()) {
-            cardSB.append(source).append("\n");
+            cardSB.append("\n").append(source).append("\n");
         }
         if (!tags.isEmpty()) {
             cardSB.append("Tags:").append("\n").append("\t");

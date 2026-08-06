@@ -12,9 +12,10 @@ public class test {
     
     public static void main() {
         Flashcard cardOne = new Flashcard("grail", PartOfSpeech.NOUN, " the object of an" +
-                " extended or difficult quest", "Fitzgerald F. Scott, The Great Gatsby");
+                " extended or difficult quest", "'We must find the holy grail!'");
+        cardOne.addSource("F. Scott Fitzgerald, The Great Gatsby");
 
-        System.out.println();
+        System.out.println(cardOne);
 
 
     }
