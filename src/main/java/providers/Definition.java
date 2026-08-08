@@ -70,7 +70,7 @@ public class Definition {
      */
     @Override
     public String toString() {
-        StringBuilder defSB = new StringBuilder("[" + PoS.toString() + "] -");
+        StringBuilder defSB = new StringBuilder("[" + PoS.toString() + "] - ");
         defSB.append(description);
 
         if (!example.isEmpty()) {
