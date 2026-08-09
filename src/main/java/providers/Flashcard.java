@@ -139,6 +139,12 @@ public class Flashcard {
 
     /**
      *
+     * @param word
+     */
+    public void addRelated(String word) { relatedWords.add(word); }
+
+    /**
+     *
      * @param tag
      */
     public void addTag(String tag) {
