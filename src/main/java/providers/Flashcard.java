@@ -83,7 +83,8 @@ public class Flashcard {
         if (other instanceof Flashcard otherCard) {
             return this.word.equals(otherCard.word) && this.definitions.equals
                     (otherCard.definitions) && this.source.equals(otherCard.source) &&
-                    this.tags.equals(otherCard.tags);
+                    this.tags.equals(otherCard.tags) &&
+                    this.relatedWords.equals(otherCard.relatedWords);
         }
         return false;
     }
