@@ -61,6 +61,16 @@ public class WordBankModel {
         createdTags.add(newTag);
     }
 
+    /**
+     * ____
+     *
+     * @param tag
+     * @param card
+     */
+    public void addTag(String tag, Flashcard card) {
+        card.addTag(tag);
+    }
+
 
     // ----------------------------------GETTERS----------------------------------
 
