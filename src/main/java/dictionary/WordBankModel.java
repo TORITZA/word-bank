@@ -60,4 +60,19 @@ public class WordBankModel {
     public void createTag(String newTag) {
         createdTags.add(newTag);
     }
+
+
+    // ----------------------------------GETTERS----------------------------------
+
+    /**
+     *
+     * @return
+     */
+    public Set<Flashcard> getFlashcards() { return flashcards; }
+
+    /**
+     *
+     * @return
+     */
+    public Set<String> getCreatedTags() { return createdTags; }
 }
