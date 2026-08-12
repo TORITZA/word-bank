@@ -71,6 +71,15 @@ public class WordBankModel {
         card.addTag(tag);
     }
 
+    /**
+     *
+     * @param tag
+     * @param card
+     */
+    public void removeTag(String tag, Flashcard card) {
+        card.removeTag(tag);
+    }
+
 
     // ----------------------------------GETTERS----------------------------------
 
